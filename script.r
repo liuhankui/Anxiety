@@ -2,7 +2,8 @@
 library(EWCE)
 library(ggplot2)
 
-#download the full Karolinska dataset
+#download the full Karolinska dataset 
+#reference: Skene N G, Bryois J, Bakken T E, et al. Genetic identification of brain cell types underlying schizophrenia[J]. Nature genetics, 2018, 50(6): 825-833.
 download.file("http://www.hjerling-leffler-lab.org/data/scz_singlecell/ctdFiles.zip",destfile="ctdFiles.zip") 
 unzip("ctdFiles.zip")
 path <- "ctd_allKI.rda"
