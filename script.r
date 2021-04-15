@@ -32,7 +32,7 @@ ADs.specific.results <- bootstrap.enrichment.test(hits=ADs.specific.genes.mouse,
 set.seed(202104)
 CBT.results <- bootstrap.enrichment.test(hits=CBT.genes.mouse,sct_data=ctd,bg=mouse.bg,reps=10000,annotLevel=1)$results[,3:5]
 
-#mark the cell types for x-axis
+#save the cell types for x-axis of plot
 ADs.results$cellTypes <- row.names(ADs.results)
 ADs.specific.results$cellTypes <- row.names(ADs.specific.results)
 CBT.results$cellTypes <- row.names(CBT.results)
@@ -42,12 +42,12 @@ ADs.results$p_adjust <- p.adjust(ADs.results$p,method='fdr')
 ADs.specific.results$p_adjust <- p.adjust(ADs.specific.results$p,method='fdr')
 CBT.results$p_adjust <- p.adjust(CBT.results$p,method='fdr')
 
-#mark the names of three gene lists
+#mark the names of the three gene lists
 ADs.results$GeneSet <- 'ADs-related genes'
 ADs.specific.results$GeneSet  <- 'ADs-specific genes'
 CBT.results$GeneSet <- 'CBT-related genes'
 
-#merge the results of three gene lists
+#merge the results of the three gene lists
 All.results <- rbind(ADs.results,ADs.specific.results,CBT.results)
 
 #visualization
