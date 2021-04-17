@@ -43,8 +43,8 @@ ADs.specific.results$p_adjust <- p.adjust(ADs.specific.results$p,method='fdr')
 CBT.results$p_adjust <- p.adjust(CBT.results$p,method='fdr')
 
 #mark the names of the three gene lists
-ADs.results$GeneSet <- 'ADs-related genes'
-ADs.specific.results$GeneSet  <- 'ADs-specific genes'
+ADs.results$GeneSet <- 'AD-related genes'
+ADs.specific.results$GeneSet  <- 'AD-specific genes'
 CBT.results$GeneSet <- 'CBT-related genes'
 
 #merge the results of the three gene lists
